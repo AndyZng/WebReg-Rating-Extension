@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name" : "Webreg Course Info Extension",
+    "version": "1.0",
+    "description": "Displays information about professors and expected workload in webreg.",
+    "permissions": ["scripting", "activeTab", "webRequest"],
+    "content_scripts": [
+        {
+            "matches": ["https://act.ucsd.edu/webreg2/*"],
+            "css": ["Data_Visual.css"],
+            "js": ["Prof-Info.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["capes_data.csv"],
+            "matches": ["<all_urls>"]
+        },
+        {
+            "resources": ["rmp_data_without_empty_lines.csv"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
