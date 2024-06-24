@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name" : "Webreg Course Info Extension",
-    "version": "1.0",
+    "version": "1.2",
     "description": "Displays information about professors and expected workload in webreg.",
     "permissions": ["scripting", "activeTab", "webRequest"],
     "content_scripts": [
